@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00C52859-EEB9-4C19-8E71-3541C46F9075}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MegaTabLight</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\..\..\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_ts300.lib;opencv_world300.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source code\Arduino\LEDBoardControl.cpp" />
+    <ClCompile Include="..\..\source code\General and Main\EdditionalFunction.cpp" />
+    <ClCompile Include="..\..\source code\General and Main\exceptions.cpp" />
+    <ClCompile Include="..\..\source code\General and Main\Main.cpp" />
+    <ClCompile Include="..\..\source code\IO devices\CommunicationProtocol.cpp" />
+    <ClCompile Include="..\..\source code\IO devices\Screen.cpp" />
+    <ClCompile Include="..\..\source code\IO devices\Sensor.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Brightness.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\ChangePassword.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\ComputerCommunicate.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\ComputerControl.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\FeedBack.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Games.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\GeneralPage.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Hockey.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Keyboard.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Light.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\LiveWallPaper.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Media.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Menu.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Mouse.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Movie.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Page.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Paint.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Password.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Picture.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\PrintPic.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Sensitivity.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Settings.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\SettingsFile.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Shortcut.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\Snake.cpp" />
+    <ClCompile Include="..\..\source code\Menu system\WallPaper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source code\General and Main\EdditionalFunction.h" />
+    <ClInclude Include="..\..\source code\General and Main\exceptions.h" />
+    <ClInclude Include="..\..\source code\General and Main\General.h" />
+    <ClInclude Include="..\..\source code\General and Main\Main.h" />
+    <ClInclude Include="..\..\source code\General and Main\PicturesPlaces.h" />
+    <ClInclude Include="..\..\source code\IO devices\CommunicationProtocol.h" />
+    <ClInclude Include="..\..\source code\IO devices\Screen.h" />
+    <ClInclude Include="..\..\source code\IO devices\Sensor.h" />
+    <ClInclude Include="..\..\source code\Menu system\Brightness.h" />
+    <ClInclude Include="..\..\source code\Menu system\ChangePassword.h" />
+    <ClInclude Include="..\..\source code\Menu system\ComputerCommunicate.h" />
+    <ClInclude Include="..\..\source code\Menu system\ComputerControl.h" />
+    <ClInclude Include="..\..\source code\Menu system\FeedBack.h" />
+    <ClInclude Include="..\..\source code\Menu system\Games.h" />
+    <ClInclude Include="..\..\source code\Menu system\GeneralPage.h" />
+    <ClInclude Include="..\..\source code\Menu system\Hockey.h" />
+    <ClInclude Include="..\..\source code\Menu system\Keyboard.h" />
+    <ClInclude Include="..\..\source code\Menu system\Light.h" />
+    <ClInclude Include="..\..\source code\Menu system\LiveWallPaper.h" />
+    <ClInclude Include="..\..\source code\Menu system\Media.h" />
+    <ClInclude Include="..\..\source code\Menu system\Menu.h" />
+    <ClInclude Include="..\..\source code\Menu system\Mouse.h" />
+    <ClInclude Include="..\..\source code\Menu system\Movie.h" />
+    <ClInclude Include="..\..\source code\Menu system\Page.h" />
+    <ClInclude Include="..\..\source code\Menu system\Paint.h" />
+    <ClInclude Include="..\..\source code\Menu system\Password.h" />
+    <ClInclude Include="..\..\source code\Menu system\Picture.h" />
+    <ClInclude Include="..\..\source code\Menu system\PrintPic.h" />
+    <ClInclude Include="..\..\source code\Menu system\Sensitivity.h" />
+    <ClInclude Include="..\..\source code\Menu system\Settings.h" />
+    <ClInclude Include="..\..\source code\Menu system\SettingsFile.h" />
+    <ClInclude Include="..\..\source code\Menu system\Shortcut.h" />
+    <ClInclude Include="..\..\source code\Menu system\Snake.h" />
+    <ClInclude Include="..\..\source code\Menu system\WallPaper.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
