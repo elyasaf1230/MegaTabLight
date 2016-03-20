@@ -9,7 +9,7 @@ private:
 	Menu();
 
 public:
-	virtual Page* Function(cv::Mat* input);
+	virtual Page* Function(std::vector<std::vector<cv::Point>> *contours);
 
 	//singleton:
 	static Menu *instance()

@@ -10,6 +10,7 @@
 #include <thread>
 #include <mutex>
 #include <string>
+#include <map>
 #include "EdditionalFunction.h"
 #include "PicturesPlaces.h"
 #include "exceptions.h"

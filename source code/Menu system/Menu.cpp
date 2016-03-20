@@ -6,7 +6,11 @@ Constructor.
 */
 Menu::Menu()
 {
-
+	switch (switch_on)
+	{
+	default:
+		break;
+	}
 }
 
 
@@ -19,7 +23,12 @@ Menu::~Menu()
 }
 
 
-Page* Menu::Function(cv::Mat* input)
+Page* Menu::Function(std::vector<std::vector<cv::Point>> *contours)
 {
-
+	//asuming there is more then one press the program will ignore the presses.
+	if (contours->capacity() == 1)
+	{
+		
+	}
+	return this;
 }
