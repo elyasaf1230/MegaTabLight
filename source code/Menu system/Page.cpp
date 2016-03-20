@@ -39,31 +39,36 @@ Page* Page::Next(cv::Mat* input)
 		//appends itself into the vector.
 		functions.push_back(this);
 
-	std::vector<std::vector<cv::Point>> *contours;
+	std::vector<std::vector<cv::Point>> *contours = NULL;
 	Page* next = NULL;
 
 	//finding contours (touches).
 	DetectPlaceTouched(_Buttons, input, contours);
-
+	
 	//Checking if Menu touched.
-	for (std::vector<std::vector<cv::Point>>::iterator it = contours->begin(); it < contours->end(); ++it)
+	for (std::vector<std::vector<cv::Point>>::iterator it_contour = contours->begin(); it_contour < contours->end(); ++it_contour)
 	{
-		if (std::find(GetMenuButtonPlace().begin(), GetMenuButtonPlace().end(), it->begin) != GetMenuButtonPlace().end()) //detecting Menu press (menu before back).
+		for (std::vector<cv::Point>::iterator it_point = it_contour->begin(); it_point < it_contour->end(); ++it_point)
 		{
-			next = functions[0];
-			functions.clear();
+			//detecting Menu press (menu before back).
+			if (std::find(GetMenuButtonPlace().begin(), GetMenuButtonPlace().end(), *it_point._Ptr) != GetMenuButtonPlace().end()) 
+			{
+				next = functions[0];
+				functions.clear();
 
-			return next;
-		}
-		else if (std::find(GetMenuButtonPlace().begin(), GetBackButtonPlace().end(), it->begin) != GetBackButtonPlace().end()) //detecting Back press.
-		{
-			functions.pop_back(); //pop current.
-			next = functions.back();
+				return next;
+			}
+			//detecting Back press.
+			else if (std::find(GetMenuButtonPlace().begin(), GetBackButtonPlace().end(), *it_point._Ptr) != GetBackButtonPlace().end()) 
+			{
+				functions.pop_back(); //pop current.
+				next = functions.back();
 
-			return next;
+				return next;
+			}
 		}
 	}
-
+	
 	//call the real function... ^_^
 	return this->Function(contours);
 }

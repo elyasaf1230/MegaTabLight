@@ -1,4 +1,8 @@
+#ifndef _EXCEPTIONS_
+#define _EXCEPTIONS_
+
 #include <exception>
+#include <string>
 
 class ConnectionException : public std::exception
 {
@@ -18,13 +22,16 @@ public:
 class SPIException : public ConnectionException
 {
 private:
-	string _what = "Establish SPI connection failed!";
+	std::string _what = "Establish SPI connection failed!";
 public:
+	
 	virtual const char* what() const throw()
 	{
-		return this->_what.c_str();
+		return _what.c_str();
 	}
-	void set_what(string newWhat) { this->_what = newWhat; }
+	void set_what(std::string newWhat) { _what = newWhat; }
 };
+
+#endif
 
 
