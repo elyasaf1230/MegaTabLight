@@ -1,9 +1,0 @@
-to connect to the raspberry offline (and online) via ethernet cable:
-
-name : raspberrypi.mshome.net
-user name : pi
-password : admin
-
-(pi@raspberrypi.mshome.net)
-
-(its real name is - raspberrypi)
