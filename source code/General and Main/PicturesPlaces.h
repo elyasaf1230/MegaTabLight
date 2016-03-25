@@ -4,5 +4,15 @@
 	as a string and there will be only(!) definations... 
 */
 
-#define PICTURE_WELLCOME "../External files/Pictures/Wellcome.bmp"
-#define PICTURE_DEAD	 "../External files/Pictures/Dead.bmp"
+#define PICTURES_FORMAT		".bmp"
+
+#define PICTURE_WELLCOME	"../External files/Pictures/Wellcome_P"
+#define BUTTONS_WELLCOME	"../External files/Pictures/Wellcome_B"
+#define PICTURE_DEAD		"../External files/Pictures/Dead_P"
+#define BUTTONS_DEAD		"../External files/Pictures/Dead_B"
+#define PICTURE_MENU		"../External files/Pictures/Menu_P"
+#define BUTTONS_MENU		"../External files/Pictures/Menu_B"
+#define PICTURE_KEYBOARD	"../External files/Pictures/Keyboard_P"
+#define BUTTONS_KEYBOARD	"../External files/Pictures/Keyboard_B"
+#define PICTURE_MOUSE		"../External files/Pictures/Mouse_P"
+#define BUTTONS_MOUSE		"../External files/Pictures/Mouse_B"

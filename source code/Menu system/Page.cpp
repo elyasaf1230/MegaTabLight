@@ -5,11 +5,33 @@
 */
 Page::Page(std::string BaseDisplayName, std::string ButtonsName)
 {
+	switch (ScreenSize().width / SCREEN_WIDTH)
+	{
+	case SMALL:
+		BaseDisplayName += "_SMALL";
+		ButtonsName += "_SMALL";
+		break;
+	case MEDIUM:
+		BaseDisplayName += "_MEDUIM";
+		ButtonsName += "_MEDUIM";
+		break;
+	case LARGE:
+		BaseDisplayName += "_LARGE";
+		ButtonsName += "_LARGE";
+		break;
+	default:
+		break;
+	}
+	BaseDisplayName += PICTURES_FORMAT;
+	ButtonsName += PICTURES_FORMAT;
+
+	this->_BaseDisplay = new cv::Mat();
 	*_BaseDisplay = cv::imread(BaseDisplayName);
 
 	if (_BaseDisplay->data == NULL)
 		std::cout << "BaseDisplay picture failed to open : " << BaseDisplayName << std::endl;
 
+	this->_Buttons = new cv::Mat();
 	*_Buttons = cv::imread(ButtonsName);
 
 	if (_Buttons->data == NULL)
@@ -23,7 +45,10 @@ Page::Page(std::string BaseDisplayName, std::string ButtonsName)
 */
 Page::~Page()
 {
-
+	if (this->_BaseDisplay != NULL)
+		delete(this->_BaseDisplay);
+	if (this->_Buttons != NULL)
+		delete(this->_Buttons);
 }
 
 

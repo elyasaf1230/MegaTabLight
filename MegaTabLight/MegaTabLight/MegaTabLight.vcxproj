@@ -116,6 +116,7 @@
     <ClCompile Include="..\..\source code\Menu system\WallPaper.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\source code\General and Main\EdditionalClasses.h" />
     <ClInclude Include="..\..\source code\General and Main\EdditionalFunction.h" />
     <ClInclude Include="..\..\source code\General and Main\exceptions.h" />
     <ClInclude Include="..\..\source code\General and Main\General.h" />

@@ -10,10 +10,11 @@
 #include <thread>
 #include <mutex>
 #include <string>
-#include <map>
+#include <unordered_map>
 #include "EdditionalFunction.h"
 #include "PicturesPlaces.h"
 #include "exceptions.h"
+#include "EdditionalClasses.h"
 
 #define SCREEN_WIDTH 30
 #define SENSOR_WIDTH 15

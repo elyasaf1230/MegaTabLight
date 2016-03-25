@@ -1,5 +1,11 @@
 #include "../General and Main/General.h"
 
+/*
+	Basic Asumes: 
+			1. All buttons are squares.
+			2. 
+*/
+
 class Page
 {
 protected: 

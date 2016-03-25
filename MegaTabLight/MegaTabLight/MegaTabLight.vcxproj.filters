@@ -239,5 +239,8 @@
     <ClInclude Include="..\..\source code\General and Main\exceptions.h">
       <Filter>Header Files\General And Main</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source code\General and Main\EdditionalClasses.h">
+      <Filter>Header Files\General And Main</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
