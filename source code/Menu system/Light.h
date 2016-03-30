@@ -1,15 +1,22 @@
 #include "../General and Main/General.h"
 #include "Page.h"
 
+#include "LiveWallPaper.h"
+#include "WallPaper.h"
+
+#define WALLPAPER_BUTTON_COLOR		255
+#define LIVEWALLPAPER_BUTTON_COLOR	254
+
 class Light : public Page
 {
 private:
+	std::unordered_map<Square, Page*> _Actions;
 	//singleton:
 	static Light* s_instance;
 	Light();
 
 public:
-	virtual Page* Function(cv::Mat* input);
+	virtual Page* Function(std::vector<std::vector<cv::Point>> *contours);
 
 	//singleton:
 	static Light *instance()

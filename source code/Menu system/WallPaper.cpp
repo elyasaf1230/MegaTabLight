@@ -3,8 +3,9 @@
 /*
 Constructor.
 */
-WallPaper::WallPaper()
+WallPaper::WallPaper() : Page(PICTURE_WALLPAPER, BUTTONS_WALLPAPER)
 {
+	//loading buttons.
 
 }
 

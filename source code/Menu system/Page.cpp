@@ -25,18 +25,21 @@ Page::Page(std::string BaseDisplayName, std::string ButtonsName)
 	BaseDisplayName += PICTURES_FORMAT;
 	ButtonsName += PICTURES_FORMAT;
 
-	this->_BaseDisplay = new cv::Mat();
-	*_BaseDisplay = cv::imread(BaseDisplayName);
+	if (BaseDisplayName != ""){
+		this->_BaseDisplay = new cv::Mat();
+		*_BaseDisplay = cv::imread(BaseDisplayName);
+	
+		if (_BaseDisplay->data == NULL)
+			std::cout << "BaseDisplay picture failed to open : " << BaseDisplayName << std::endl;
+	}
 
-	if (_BaseDisplay->data == NULL)
-		std::cout << "BaseDisplay picture failed to open : " << BaseDisplayName << std::endl;
+	if (ButtonsName != ""){
+		this->_Buttons = new cv::Mat();
+		*_Buttons = cv::imread(ButtonsName);
 
-	this->_Buttons = new cv::Mat();
-	*_Buttons = cv::imread(ButtonsName);
-
-	if (_Buttons->data == NULL)
-		std::cout << "Buttons picture failed to open : " << ButtonsName << std::endl;
-
+		if (_Buttons->data == NULL)
+			std::cout << "Buttons picture failed to open : " << ButtonsName << std::endl;
+	}
 }
 
 

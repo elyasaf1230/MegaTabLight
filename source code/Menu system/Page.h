@@ -18,7 +18,7 @@ protected:
 
 public:
 	Page();
-	Page(std::string BaseDisplayName, std::string ButtonsName);
+	Page(std::string BaseDisplayName, std::string ButtonsName = "");
 	~Page();
 	Page* Next(cv::Mat* input);
 };
