@@ -15,6 +15,7 @@
 #include "PicturesPlaces.h"
 #include "exceptions.h"
 #include "EdditionalClasses.h"
+#include "dirent.h"
 
 #define SCREEN_WIDTH 30
 #define SENSOR_WIDTH 15
@@ -75,6 +76,14 @@ std::vector<cv::Point> GetBackButtonPlace(std::vector<cv::Point> *contour = NULL
 {
 	static std::vector<cv::Point> BackComtour = *contour;
 	return BackComtour;
+}
+
+
+//this will define the size of the cursor.
+int CursorSize(int size)
+{
+	static int cursor_size = size;
+	return cursor_size;
 }
 
 

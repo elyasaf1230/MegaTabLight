@@ -1,6 +1,6 @@
 #include "EdditionalFunction.h"
 
-
+/*
 void DetectPlaceTouched(cv::Mat* buttons, cv::Mat* input, std::vector<std::vector<cv::Point>> *contours)
 {
 	cv::Mat result = *input;
@@ -27,4 +27,11 @@ void DetectPlaceTouched(cv::Mat* buttons, cv::Mat* input, std::vector<std::vecto
 	std::vector<cv::Vec4i> hierarchy;
 
 	cv::findContours(result, *contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+}
+*/
+
+void DetectPlaceTouched(cv::Mat* buttons, cv::Mat* input, std::vector<std::vector<cv::Point>> *contours)
+{
+	cv::Mat result = *input;
+	
 }
